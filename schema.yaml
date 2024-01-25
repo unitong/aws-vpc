@@ -1,0 +1,27 @@
+openapi: 3.0.3
+info:
+  title: OpenAPI schema for template aws-vpc
+components:
+  schemas:
+    variables:
+      type: object
+      properties:
+        instance_name:
+          title: Instance Name
+          type: string
+          description: instance name
+          default: test_resource
+          x-walrus-ui:
+            group: Basic
+            order: 1
+        vpc_cidr_block:
+          title: Vpc Cidr Block
+          type: string
+          description: vpc cidr block
+          default: 172.16.0.0/16
+          x-walrus-ui:
+            group: Basic
+            order: 2
+      x-walrus-ui:
+        groupOrder:
+        - Basic
